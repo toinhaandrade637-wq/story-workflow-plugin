@@ -41589,7 +41589,20 @@ K3(
       activeFilePath: external_exports.string().nullable().optional().describe("\u5F53\u524D\u9009\u4E2D\u6587\u4EF6"),
       openFiles: external_exports.array(external_exports.object({ path: external_exports.string(), name: external_exports.string() })).optional().describe("\u5F53\u524D\u6253\u5F00\u7684\u6587\u4EF6")
     },
-    _meta: { ui: { resourceUri: WIDGET_URI, visibility: ["app"] } }
+    /*
+     * 可见性必须是 ['model','app']（2026-11-16 改）。
+     *
+     * 原来是 ['app']，含义是「只有 App 内部能调」。后果很硬：
+     *   模型看不到这个工具 → 没有任何调用点 → 宿主没有理由去拉
+     *   ui://widget/story-workflow/index.html → 界面永远不出现。
+     * 资源是注册好的、字节也在，就是没人拉。WorkBuddy 那边实测就是这个现象：
+     * resources/list 能列出资源、resources/read 能读到 1.29MB，
+     * 但页面上什么都不显示，直到可见性改成 ['model','app'] 才渲染。
+     *
+     * WorkRally 的宿主会主动拉起，所以以前看不出问题；换成只会「跟着工具调用走」的
+     * 宿主，这一行就是唯一的入口。
+     */
+    _meta: { ui: { resourceUri: WIDGET_URI, visibility: ["model", "app"] } }
   },
   async (args) => ({
     content: [

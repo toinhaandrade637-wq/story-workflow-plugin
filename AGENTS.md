@@ -114,23 +114,66 @@ node <仓库绝对路径>/server/index.mjs
 **改完必须让用户完全退出客户端再打开。** Windows 上 Claude Desktop 要在托盘里也退出，
 只关窗口不算。
 
-### 4.3 仓库根的两个清单，别混用
+### 4.3 仓库根的三个配置文件，别混用
 
-仓库根有两份配置，**面向两类不同的宿主**。搞混是最常见的接入失败原因：
+仓库根有三份配置，**面向三类不同的宿主**。混用是接入失败最常见的原因，
+而且失败方式通常是**静默的**——不报错，只是不加载。
 
 | 文件 | 格式 | 给谁用 | 关键点 |
 |---|---|---|---|
-| `plugin.json` + `mcp.json` | **Agent Plugins 1.0.0** | 支持该标准的插件宿主（ChatGPT 桌面端、Codex、Cursor、Copilot、VS Code、Kiro 等） | 通过官方 schema；`mcp.json` 里用 `${PLUGIN_ROOT}` |
-| 上面第 4 节那段 JSON | **通用 MCP 配置** | Claude Desktop、Cline、Roo、Zed、Continue 等只认 MCP 的客户端 | 必须换成**绝对路径**，不能用 `${PLUGIN_ROOT}` |
+| `plugin.json` + `mcp.json` | **Agent Plugins 1.0.0** | 支持该标准的插件宿主（ChatGPT 桌面端、Codex、Cursor、Copilot、VS Code、Kiro 等） | 把**目录**交给宿主，别手工搬配置。`mcp.json` 里用 `${PLUGIN_ROOT}` |
+| `mcp.client.json` | **纯 MCP**（只有 `command` + `args`） | Claude Desktop、Cline、Roo、Zed、Continue、WorkBuddy 等 | 把 `REPLACE_WITH_ABSOLUTE_PATH` 换成真实绝对路径 |
+| 上面第 4 节那段 JSON | 同上，内联版 | 想直接粘、不想找文件时 | 与 `mcp.client.json` 等价 |
+
+**为什么不能把 `mcp.json` 直接给通用客户端**
+
+`mcp.json` 里除了 `command` / `args`，还有 `$schema`、`type: "stdio"`、`cwd`。
+这三样是 Agent Plugins 规范要求的，但**通用 MCP 客户端只认 `command` 和 `args`**，
+遇到多余字段有两种退化方式：
+
+- 宽松的：忽略多余字段，能用；
+- 严格的：整条配置判为非法，**静默跳过，不报错**。你以为配好了，其实服务根本没起。
+
+实测过的例子：某宿主把带 `type` / `cwd` 的那条配置整个忽略，日志里连进程都没 spawn；
+换成只有 `command` + `args` 之后立刻连上。所以**给通用客户端就用 `mcp.client.json`**。
 
 **判断方法**
 
-- 客户端说自己「支持 Agent Plugins」→ 直接指向仓库根，别手工改配置。
-- 客户端只说自己「支持 MCP」→ 用第 4 节的手工配置，**把 `${PLUGIN_ROOT}` 换成真实绝对路径**。
-  这类客户端不认这个变量，会把它当字面量，结果就是找不到文件。
+- 客户端说自己「支持 Agent Plugins」→ 直接指向仓库根目录。
+- 客户端只说自己「支持 MCP」→ 用 `mcp.client.json`，改成绝对路径。
+- 不确定 → 先按 `mcp.client.json` 走，最保守。
 
 `${PLUGIN_ROOT}` 与 `${PLUGIN_DATA}` 由宿主注入，插件自己不能伪造，也不要写进 `env`
-（官方 schema 明确禁止这两个键出现在 `env` 里）。
+（官方 schema 明确禁止这两个键出现在 `env` 里）。**通用客户端不认这两个变量**，
+写进去会被当字面量，结果就是找不到文件。
+
+### 4.4 还有一道「信任闸门」，别漏
+
+不少宿主不会自动加载新出现的外部 MCP 服务，需要在它自己的界面里**保存一次 + 点信任**
+（有的叫「批准」「允许」）。典型表现：
+
+- 配置文件写了、JSON 也合法，但工具列表里没有；
+- 直接改配置文件**不会**触发宿主的配置刷新；
+- 在宿主 UI 里保存并确认后，进程才真正被 spawn。
+
+所以：**改完配置文件，如果宿主有「连接器 / MCP」管理界面，进去保存一次并点信任。**
+只改文件、不点信任，等于没配。
+
+### 4.5 界面出不来，先查这一条
+
+本插件带一个 MCP Apps 工作台（`ui/dist/index.html`，1.2 MB 单文件）。
+它由一个工具触发加载：`platform_open`，声明了 `resourceUri`。
+
+**如果宿主支持 MCP Apps 但界面不显示**，按顺序查：
+
+1. `platform_open` 对模型是否可见（`_meta.ui.visibility` 必须含 `model`）。
+   若只写 `['app']`，模型看不见 → 没人调 → 宿主不拉资源 → 界面永不出现。
+   资源本身是好的：`resources/list` 能列出、`resources/read` 能读到字节。
+2. 宿主是否愿意渲染 MCP App（有的宿主只当普通工具集用，不渲染 UI）。
+3. 宿主是否有侧栏/面板需要展开。
+
+**界面不显示不影响功能。** 全部 54 个业务工具都是模型可见的，
+可以在对话里直接完成建档、写稿、判据校验，只是没有可视化工作台。
 
 ---
 

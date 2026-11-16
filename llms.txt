@@ -22,8 +22,18 @@
 支持该标准的宿主（ChatGPT 桌面端 / Codex / Cursor / Copilot / VS Code / Kiro）
 把目录整个交进去即可，不用手写配置。
 
-只支持 MCP 的宿主（Claude Desktop / Cline / Roo / Zed / Continue）
-需要手写配置，且**必须用绝对路径**——它们不认 `${PLUGIN_ROOT}`。
+只支持 MCP 的宿主（Claude Desktop / Cline / Roo / Zed / Continue / WorkBuddy）
+**用 `mcp.client.json`**——它只有 `command` + `args`，把 `REPLACE_WITH_ABSOLUTE_PATH`
+换成真实路径。不要把 `mcp.json` 抄给这类客户端：它带 `$schema` / `type` / `cwd`，
+严格一点的宿主会整条判为非法并**静默跳过**，不报错但工具列表是空的。
+
+配完还要在宿主的「连接器 / MCP」界面里**保存一次并点信任**，只改文件不会触发加载。
+
+## UI 入口
+
+工作台由 `platform_open` 触发（`_meta.ui.resourceUri` 指向 `ui://widget/story-workflow/index.html`）。
+该工具必须对模型可见（`visibility` 含 `model`），否则没人调用 → 宿主不拉资源 → 界面永不出现。
+界面不显示不影响功能：全部 54 个业务工具都可直接在对话里用。
 
 ## 关键事实
 

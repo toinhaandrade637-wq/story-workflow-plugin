@@ -1,11 +1,11 @@
 {
   "name": "story-workflow",
-  "version": "0.5.1",
-  "sourceCommit": "9f6fffa78e9739ee990a786925248a6c66a3d8ca",
-  "builtAt": "2026-11-16T01:19:14.436Z",
+  "version": "0.5.2",
+  "sourceCommit": "66d979efce141e4a2fe89742f2a1bf7e7ec17ef9",
+  "builtAt": "2026-11-16T01:57:05.097Z",
   "node": ">=20.6",
-  "fileCount": 234,
-  "totalBytes": 8970235,
+  "fileCount": 235,
+  "totalBytes": 8977862,
   "files": [
     {
       "path": ".gitattributes",
@@ -19,13 +19,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 10475,
-      "sha256": "a9a0145f5945ac68ecd69258d927554ab233268c32844a93a023845010d54016"
+      "bytes": 12900,
+      "sha256": "62beca914dde9d6d7819bf9225c7eadc3d13a2643a000e36f7716d37f935e1ca"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2526,
-      "sha256": "eb085887ca7769039cda26fd3a4a06fa44ce9b3fd940672f1137d367ed18b2de"
+      "bytes": 4555,
+      "sha256": "09b2b27ad38333e081ed8939feb5230500c395955c0e8ad2c8c7d2244763af1c"
     },
     {
       "path": "INSTALL.md",
@@ -44,8 +44,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9786,
-      "sha256": "4e422f909b0fde8ee3a271e612dfcd7500f38b7a1cb7ff67518a2a557097abcc"
+      "bytes": 11328,
+      "sha256": "73427610900612a3e6929434705cbbef54892cd8974e61842f4e2ade8b4576a6"
     },
     {
       "path": "data/demo/01-立项/立项定位表.md",
@@ -1129,8 +1129,13 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 2631,
-      "sha256": "8f95eb9341b5e7ecaa4f0489135e623d324280c5f8ed33fad8640c9231f88efb"
+      "bytes": 3323,
+      "sha256": "2d3755805d5abee2f2010a588b5546b377949d48dbd29e0d05f59600688f30a0"
+    },
+    {
+      "path": "mcp.client.json",
+      "bytes": 143,
+      "sha256": "5012f0786098c84d446ee2a6d71ba4f18e4434b9986bae9b7f72fa38cfd8afdc"
     },
     {
       "path": "mcp.json",
@@ -1140,17 +1145,17 @@
     {
       "path": "package.json",
       "bytes": 238,
-      "sha256": "eb44fd83af65f400e0c89057f0c278c381eb0a3209382d09e67f20d31501df1b"
+      "sha256": "ddd0feece17641ba9807ede33a2b659fe9b87a9b66aedfbe5b42137f01183de5"
     },
     {
       "path": "plugin.json",
       "bytes": 1467,
-      "sha256": "f7d09e893502ce5ace3449e6fdee9bc0879f32a9a7e2973276c6b1c7cbed4369"
+      "sha256": "723f93d074f0ddd00fa1d2707062eb39ca71b7492dbb3fe0b5e22d61fb84d866"
     },
     {
       "path": "server/index.mjs",
-      "bytes": 2155455,
-      "sha256": "5d1edfa72d4f18b24b011072be1b24f04c8fd4ae660000e5258e2d306f897370"
+      "bytes": 2156251,
+      "sha256": "d638f5d6898c11c44585a7f2c3f9a75a6af3c10a8c67d905e9c30a6a6548f8ff"
     },
     {
       "path": "skills/story-idea/SKILL.md",
@@ -1175,7 +1180,7 @@
     {
       "path": "ui/dist/index.html",
       "bytes": 1306858,
-      "sha256": "45bd18623eed5512a611959ee02c75632b7181d979dc82acbdb106f7736fa583"
+      "sha256": "e8ad13414183414357e073a44bc37323f683d26aaf542cc5120acdeb9678c28e"
     }
   ]
 }

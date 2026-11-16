@@ -76,24 +76,31 @@ git clone https://github.com/toinhaandrade637-wq/story-workflow-plugin.git
 
 唯一要确认的是 Node 在宿主的 PATH 里。装完让它列一下工具，看到 `story-workflow` 就通了。
 
-#### B. 你的客户端只支持 MCP（Claude Desktop / Cline / Roo / Zed / Continue）
+#### B. 你的客户端只支持 MCP（Claude Desktop / Cline / Roo / Zed / Continue / WorkBuddy）
 
-把下面这段加进它的配置，**把路径换成你 clone 下来的真实绝对路径**：
+**用仓库根的 `mcp.client.json`，把 `REPLACE_WITH_ABSOLUTE_PATH` 换成你的真实路径。**
+它只有 `command` + `args` 两个字段，这是通用客户端唯一普遍认的形状。
 
 ```json
 {
   "mcpServers": {
     "story-workflow": {
       "command": "node",
-      "args": ["/你clone到的路径/story-workflow-plugin/server/index.mjs"]
+      "args": ["C:/tools/story-workflow-plugin/server/index.mjs"]
     }
   }
 }
 ```
 
-Windows 的路径要写成 `"C:/tools/story-workflow-plugin/server/index.mjs"` 或 `"C:\\\\tools\\\\...\\\\server\\\\index.mjs"`。
+Windows 路径写成 `"C:/tools/.../server/index.mjs"`（正斜杠，推荐）
+或 `"C:\\\\tools\\\\...\\\\server\\\\index.mjs"`（转义反斜杠）。
+**不要写单反斜杠** `C:\tools\...` —— JSON 会把 `\t` 吃成制表符，路径坏掉但宿主不报错。
 
-> 这类客户端**不认** `${PLUGIN_ROOT}`，直接抄根目录 `mcp.json` 会找不到文件。必须换成绝对路径。
+> **不要**直接把根目录的 `mcp.json` 抄给这类客户端。它带 `$schema`、`type`、`cwd`，
+> 严格一点的宿主会**整条判为非法并静默跳过**——不报错，工具列表就是空的。
+
+**配完还要点一次「信任」**：多数宿主不会自动加载外部 MCP 服务，得在
+「连接器 / MCP」管理界面里保存一次并批准。只改文件、不点信任，等于没配。
 
 **各客户端配置在哪**
 
@@ -143,16 +150,35 @@ skills/       ← 四个 Agent Skill，标准 skills/<name>/SKILL.md 结构
 
 ---
 
-## 两种清单，别混用
+## 三个配置文件，别混用
 
-仓库根同时有两个清单，面向两类宿主。搞混是接入失败最常见的原因：
+仓库根有三份配置，面向三类宿主。混用是接入失败最常见的原因，
+而且失败方式通常**不报错**——只是不加载。
 
 | 文件 | 格式 | 给谁 | 路径怎么写 |
 |---|---|---|---|
 | `plugin.json` + `mcp.json` | Agent Plugins 1.0.0 | 支持该标准的插件宿主 | `${PLUGIN_ROOT}`，宿主会替换 |
-| 本文档里的手工 JSON 片段 | 通用 MCP 配置 | Claude Desktop / Cline / Roo / Zed / Continue | **必须绝对路径**，这类客户端不认 `${PLUGIN_ROOT}` |
+| **`mcp.client.json`** | **纯 MCP**（只有 `command` + `args`） | Claude Desktop / Cline / Roo / Zed / Continue / WorkBuddy | 把 `REPLACE_WITH_ABSOLUTE_PATH` 换成真实绝对路径 |
+| 本文档里的手工 JSON 片段 | 同上，内联版 | 想直接粘的时候 | 同上 |
 
-`plugin.json` 的 schema 是**封闭的**（`additionalProperties: false`），只允许
+### 为什么不能把 `mcp.json` 直接给通用客户端
+
+`mcp.json` 里有 `$schema`、`type: "stdio"`、`cwd`。这三样是 Agent Plugins 规范要求的，
+但**通用 MCP 客户端只认 `command` 和 `args`**。遇到多余字段：
+
+- 宽松的宿主：忽略，能用；
+- 严格的宿主：**整条判为非法、静默跳过**。你以为配好了，服务根本没起，工具列表是空的。
+
+所以给只认 MCP 的客户端，用 `mcp.client.json`。
+
+### 还有一道「信任闸门」
+
+不少宿主不会自动加载外部 MCP 服务，必须在它自己的界面里**保存一次 + 点信任**。
+直接改配置文件不会触发刷新。**只改文件、不点信任，等于没配。**
+
+### `plugin.json` 的字段是封闭的
+
+它的 schema 是 `additionalProperties: false`，只允许
 `$schema` / `name` / `version` / `description` / `author` / `homepage` / `repository` /
 `license` / `keywords` / `extensions`。多写一个字段整份清单就校验失败，宿主直接不加载。
 
@@ -194,7 +220,8 @@ story-workflow-plugin/
 ├── ui/dist/index.html      MCP Apps 工作台（宿主支持时显示）
 ├── AGENTS.md               给 AI 助手的接入手册（配置、排错、调用顺序）
 ├── llms.txt                机器可读的仓库摘要
-├── mcp.json                客户端配置模板
+├── mcp.json                Agent Plugins 的 MCP 配置（给插件宿主）
+├── mcp.client.json         纯 MCP 配置（给只认 command+args 的客户端）
 ├── plugin.json             插件清单
 ├── RELEASE_MANIFEST.json   每个文件的 sha256
 ├── LICENSE                 MIT

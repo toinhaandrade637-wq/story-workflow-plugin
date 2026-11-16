@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "story-workflow",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "影视与小说创作工作流：十四段工序，从一句话灵感跑到可交付的剧本、分镜与项目书。剧集 / 短剧 / 电影 / 小说四形态各自独立。",
   "author": {
     "name": "story-workflow"
