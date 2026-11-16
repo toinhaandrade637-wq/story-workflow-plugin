@@ -1,0 +1,1161 @@
+{
+  "name": "story-workflow",
+  "version": "0.5.0",
+  "sourceCommit": "cb86f865b25e650bc5bb83cc744ea74c5141d54f",
+  "builtAt": "2026-11-16T01:00:16.445Z",
+  "node": ">=20.6",
+  "fileCount": 230,
+  "totalBytes": 8952007,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1264,
+      "sha256": "0bfb4396500ead83d83dbfee5880d4ed5873b1625fbe90219fa8cedeb0554fa6"
+    },
+    {
+      "path": "INSTALL.md",
+      "bytes": 4826,
+      "sha256": "7a8ef610e10ba556c71f09cbdef3e7a0b495fceacb1d18986f64d86277faf150"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1084,
+      "sha256": "73b620c242c4519e37fa4c33030adbb43f8a5f618cced9dc5838b24aab1529a4"
+    },
+    {
+      "path": "PRIVACY.md",
+      "bytes": 958,
+      "sha256": "9546b3fdc5192ccfccb910465e4fecdce4d51058997132ffa342fac7aceb4afe"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6613,
+      "sha256": "cab4a3c53265952ad07ca9b8ae4a9fd8c836d58c6ed608172f5c313343e64f97"
+    },
+    {
+      "path": "data/demo/01-立项/立项定位表.md",
+      "bytes": 20934,
+      "sha256": "fb722f8ad8ba4cdbdc9184505929a1e909ef0df6704fbe21c4f59ec43121b5d5"
+    },
+    {
+      "path": "data/demo/02-总论/九编式总论.md",
+      "bytes": 106451,
+      "sha256": "1d56134a22048aaa1c0996353be30cf739b798c3dd5bf06c42c3f80937feb643"
+    },
+    {
+      "path": "data/demo/03-生活场/生活场与铁律.md",
+      "bytes": 11126,
+      "sha256": "dd4a70ddfd9ebcb84e44c50767fd79e38bc47ef249dcaac89b1eb8026fe6007f"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物01_赵左右（16—20岁少年与青年本体 ＆ 6岁幼年态）.md",
+      "bytes": 70568,
+      "sha256": "88a2969e9f16b455fed2fef79e3d58d16157c84ffa17b0a257bd3edf8c988898"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物02_荀未来（2033—2035成年赵左右 ＆ 2008高一转校生态）.md",
+      "bytes": 45315,
+      "sha256": "d8870c6f5f87a83fdd6fa11c6bfaa26ac2b264b3ec77534bd11e427fec741817"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物03_赵了（66岁老年穿越态 ＆ 502室跨时空守望者）.md",
+      "bytes": 39138,
+      "sha256": "25505f6a80aea41f41ca9d4048c1579ad3a330bb17295959f78b6446b7c85e01"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物04_徐图图（16—20岁少女与青年本体 ＆ 全新2033年妻子）.md",
+      "bytes": 35492,
+      "sha256": "fc8b35a81cfebd60b707752a4a1b6d1d6fe48aae05fad9ec9bffced0b67f9d9b"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物05_舒图（2033—2035年41岁成年妻子态）.md",
+      "bytes": 20848,
+      "sha256": "ae6882403130c3221c5ada25e263376b682573fd553b2bc782cdb5ef2939dc8d"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物06_王一漫（长林八中校花 ＆ 广播社社长）.md",
+      "bytes": 23922,
+      "sha256": "33389e73801d93f45161cdd867671ac757696afe03fa3bc0b2c7c188ed4c160b"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物07_罗爱文（16—18岁少年死党 ＆ 2033中年企业家）.md",
+      "bytes": 19198,
+      "sha256": "f51db76f11ad2398b9371101644c317de17e1ef7a6bead7e0c677cd40d258540"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物08_陈明（长林八中理科学霸 ＆ 铁三角挚友）.md",
+      "bytes": 24367,
+      "sha256": "e5058f1ec9654f6a12d4cc5a0845fc1b2ad209621f35f66155a03e951ef58fc3"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物09_戴娟（长林八中教导主任兼数学老师）.md",
+      "bytes": 18291,
+      "sha256": "f25e139547cf75b206541b6e0f741cfd09f283915cb0408c5d3b77c3b44a9596"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物10_赵东来（赵左右父亲·传统国企严父）.md",
+      "bytes": 19681,
+      "sha256": "e799dd966f108d391d4ab6077291a00f516ed3a4564322fa044eff5d2eed8e02"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物11_刘美奕（赵左右母亲·长林电影院经理）.md",
+      "bytes": 18624,
+      "sha256": "30284b28859c9bc8686bec94952b9460ee11782e52afc6382e0703c76567cd54"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物12_林开颜_肖雪（2058人生无限公司实习生 ＆ 2008转校生）.md",
+      "bytes": 20157,
+      "sha256": "150b15e7b76a2c42b9ec47bb5f93e52d661f8df148d9ee3bb9944785fa3689b2"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物13_余止_余博士（2008年32岁青年科学家 ＆ 2058年82岁时空修正总控）.md",
+      "bytes": 17249,
+      "sha256": "29ad36c2166878f64392ca1a9a9e974d31907a54e4654cc87819a04ec634aa2e"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物14_高尚（2058人生无限公司副总裁）.md",
+      "bytes": 11554,
+      "sha256": "886fe092c51bfd378878b7315c44409e9186626e5f1703dfab58b4f661d651d9"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物15_舒洁（徐图图母亲·坚韧单亲慈母）.md",
+      "bytes": 8632,
+      "sha256": "5e1c69228c9e582c21bef540608325d6dfe24af84c7417064e4e57574eec69d6"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物16_徐家宝（徐图图生父·岁月路与飞霞路抢劫案真凶）.md",
+      "bytes": 10395,
+      "sha256": "e83e98c2e5891210cd0386a8a5548df25b99a9db925efaf2b62db5d51d68b17d"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物17_杨敏（王一漫母亲·高压控制型中产母亲）.md",
+      "bytes": 10266,
+      "sha256": "2cf44911712ebc166c5fd87a5cb5bfa72bf6a6d56ed5bdbf53c93d294cc37b29"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物18_王伟之（王一漫父亲）.md",
+      "bytes": 6528,
+      "sha256": "5e7daba4036e1347b5306b9cd627d78c201fb8b27c4c3180ee5c3678d8f1ba9e"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物19_罗仕强（罗爱文父亲·长林爱荣机械制造厂厂长）.md",
+      "bytes": 10040,
+      "sha256": "656ea3cb3ca3ecf1f87a60eda6a9b0a0c170fd8da92d82e97db5e92cf7b01d03"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物20_舒老板（八中后街十元砂锅麻辣烫店主）.md",
+      "bytes": 9162,
+      "sha256": "85e0f738e557ee90ca0bd699136d719ddcd6cc5ee78330a77a6e175d8e728762"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物21_人生有限公司代表（2033年009号实验项目主管）.md",
+      "bytes": 8063,
+      "sha256": "6b1d2c3bdd1dfc24d819413c3c63d7c02c25060f89951133955f65cf2fbf5e74"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物22_算账小孩（三条鱼漫画屋10岁看店少年）.md",
+      "bytes": 6602,
+      "sha256": "fe13870466d7518a6dc534dd81dad1862d3fac7a5c0d0e4d6753152d38d78eb4"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物23_漫画屋房东爷爷（三条鱼漫画屋男店主）.md",
+      "bytes": 6714,
+      "sha256": "14114300ad721ab3a26f0303e5629201ee86e7491dd00829da9a038de29088e6"
+    },
+    {
+      "path": "data/demo/04-人物/一人一档-人物24_漫画屋房东奶奶（三条鱼漫画屋女店主）.md",
+      "bytes": 6673,
+      "sha256": "23496dc979040be6cc2a24eecd182ac713208e0f5682cc370bc307b0f509e583"
+    },
+    {
+      "path": "data/demo/04-人物/人物分级花名册.md",
+      "bytes": 8385,
+      "sha256": "a2613fdf3dafae1555ba2e366c66a425701b8f3b72897e4dbd260a6f74da15f1"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景01_赵左右家501室及福慧家园五楼水泥楼梯间（玄关·餐厅·厨房·少年卧室·父母主卧）.md",
+      "bytes": 13914,
+      "sha256": "eac311531ee36de4989dc89b4bd61208759846cc34f8f6d4fcc8a997347883e0"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景02_长林市第八中学（孔子像广场·红砖教学楼·教室·主任办公室·广播站·食堂·图书馆·微机室·天台·体育馆·覆雪大操场）.md",
+      "bytes": 16545,
+      "sha256": "99534005bc68dc8f10cb5ba5bbdc62aed99db0a3abae3783f31c017da51b9e17"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景03_三条鱼漫画屋（春秋路临街门脸·算账柜台·密集木质租书区·荀未来暂住木板内间）.md",
+      "bytes": 10311,
+      "sha256": "58b886b803f79bef64abcb790e644e5487b180d79793527687b577c9f13ec044"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景04_502室神秘老人安全屋（复古街机玄关·客厅沙发·000000电子保险箱·黑帘跨时空线索暗室·老式卧室）.md",
+      "bytes": 11204,
+      "sha256": "f89cbca0ed197efe33c884f30c745e1f5eeb101df6ac6ccf55a10758b084bca4"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景05_福慧家园老式家属院“三个雪人”中心院落（1998雪夜 ＆ 2008—2012冬夜）.md",
+      "bytes": 9673,
+      "sha256": "68e5bde18cabb1177092a31c2d43630cbc114c830ccaa8219c8ddaacfc3bddc7"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景06_长林市54路有轨电车系统（春秋路电车站·八中站台·绿白相间木制车厢·覆雪钢轨沿线）.md",
+      "bytes": 8492,
+      "sha256": "104d359613bde82124ec28453d5b2b6596a15ef5ea82b9d44b2909410f9dc35c"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景07_岁月路24小时自助银行街口与飞霞路风雪街道（含飞霞路IC卡公用电话亭与雪夜街巷）.md",
+      "bytes": 10252,
+      "sha256": "cdc89e37cafd5e5eba209838e37b44a5a1cc8b0fbee3e0170648935a3a6d592e"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景08_徐图图家飞霞路1449室（红色外挂铁楼梯·暖黄照片墙餐厅·书桌卧室）.md",
+      "bytes": 8575,
+      "sha256": "8aa9489dcd80d11f5833fb9408e735587a8715492d1295cf0e7406142b8e4021"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景09_王一漫家飞霞湾独栋别墅（冷白旋转楼梯·生态鱼缸客厅·二楼卧室与阳台防盗护栏）.md",
+      "bytes": 8615,
+      "sha256": "775b120995d84a80fe621ec411e209116a50012145279924e7f42b02eb200a0e"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景10_东湖公园三角尖顶礼拜堂广场、林间木栈道与寒夜冰封湖面（2008冬 ＆ 2012冬）.md",
+      "bytes": 9869,
+      "sha256": "da98943006db0f1123adf6d30aeeb71a8b7ee287ae672ed5118e3af7dd31cfa9"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景11_岁月潭森林公园白桦林海雪原与蓝色公用电话亭（跨时空虫洞信标点）.md",
+      "bytes": 8258,
+      "sha256": "9f43fde78a64061cb5c7eb2fb5c88460b931c1f9ad624817cc6182250ac84f4c"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景12_八中后街舒老板十元砂锅麻辣烫店（防风塑料门帘·砂锅灶台·木桌堂食区）.md",
+      "bytes": 8975,
+      "sha256": "742145d4c74e6a730884a8ef347bd929ac84d6d3a977ea4f525597f3eb49a00d"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景13_雪夜改装大巴车霓虹烧烤摊与串串香餐车（结冰车窗·炭火炉区·车厢卡座）.md",
+      "bytes": 8577,
+      "sha256": "1ced5527e105f6c31745bec6a6a69db9669f3fbae6ff56e0ed71ec18a9b2e4ee"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景14_長林Coffee复古观景咖啡馆（胡桃木卡座·临街格子木窗·吧台区）.md",
+      "bytes": 7209,
+      "sha256": "814e0dd2829cf376ab20fefe517f2f9470b2f4f82f05305fd10a64cb4015adb9"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景15_长林爱荣机械制造厂与金淮汽配厂（厂区大门·重型机械车间·厂长办公室·职工宿舍）.md",
+      "bytes": 8881,
+      "sha256": "01845129f067d46b22bc16488c348c7f0f6609701ecfd1bb3c001697c5d338da"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景16_远郊荒村土炕破瓦房（2008夏秋荀未来照护植物人赵了隐秘据点）.md",
+      "bytes": 9089,
+      "sha256": "ce6c7e104df47198c4af1eb90b123698c3ca094415e43149dd987dd27c165621"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景17_林海雪原32岁余博士哥特式石砌古堡（铁艺大门·挑高实验大厅·旋转石梯）.md",
+      "bytes": 7938,
+      "sha256": "b56c23604a2968710c5e55993bbefdc1f154ad204b0ca374da031054f62d7a93"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景18_长林旧物仓库跨时空电话亭通道（斑驳砖墙·废弃家具堆·公用电话亭虫洞终端）.md",
+      "bytes": 8588,
+      "sha256": "b47adb66a94e4218ce930c87efc98c827f425c6eb88409f2e0210815ee618c53"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景19_长林八中男生宿舍（上下铺铁架床·木桌电脑区·洗漱走廊）.md",
+      "bytes": 6457,
+      "sha256": "dcd0d062bf2e5d5da9618e73f9ec0d205a3aa6fea7f326818d7ff1c8259c3e92"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景20_北京华彩艺术学院考场·北京云都大学机房与高考毕业火锅店（2010—2012青春终章空间）.md",
+      "bytes": 8873,
+      "sha256": "65c4822e0c1a28548a15cad6aa196c0f53a3289b469bd3f3b5f217f8c66455e7"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景21_2033—2035近未来长林空间（数字公墓·旧时光电车咖啡馆·罗爱文豪宅·2035杂志大王摄影棚·全新2033结婚纪念日温馨之家）.md",
+      "bytes": 9851,
+      "sha256": "474fe44853880a863467d78024c008a3ede5f261089d0ae183629490cd93ea39"
+    },
+    {
+      "path": "data/demo/05-场景/一景一档-场景22_人生（无限）有限公司总部（2033会谈室·2058高尚多屏办公室·时空修正中心99%主控实验室·5F供电站与顶层通风管道）.md",
+      "bytes": 10645,
+      "sha256": "434e76480b398ee1523450b4e323d9e8fc9d7aae3c5b627dca90d5beaf8bc640"
+    },
+    {
+      "path": "data/demo/06-道具/道具总表.md",
+      "bytes": 15549,
+      "sha256": "89111462c5df025e38a4fd6ad5c44f0aa8c96fc1fc65987e65e9ebb84249f6a3"
+    },
+    {
+      "path": "data/demo/07-分集/EP01-场景纲.md",
+      "bytes": 8189,
+      "sha256": "4b22f7e120e27853f1ace9048411890d6abdb2bb17dfa452613cb0ea3d93eb10"
+    },
+    {
+      "path": "data/demo/07-分集/EP02-场景纲.md",
+      "bytes": 10017,
+      "sha256": "ebab493dc0b527d456da3e7ce37c46bd7cfafe695bc6b620bf9b3804180f8ed4"
+    },
+    {
+      "path": "data/demo/07-分集/EP03-场景纲.md",
+      "bytes": 9149,
+      "sha256": "5e46250efc8b75ff8bd25dcfcb31df345e5c4e434a05815410d4306249c8b21b"
+    },
+    {
+      "path": "data/demo/07-分集/EP04-场景纲.md",
+      "bytes": 11745,
+      "sha256": "ca46b66d00126f583a738da60a68de143a17a4e083d5c2eddea492cc9d655b7f"
+    },
+    {
+      "path": "data/demo/07-分集/EP05-场景纲.md",
+      "bytes": 10736,
+      "sha256": "9eb0d131529280e0c07018a010bb604f15d245104cd14b5a3618662a03573510"
+    },
+    {
+      "path": "data/demo/07-分集/EP06-场景纲.md",
+      "bytes": 12988,
+      "sha256": "4a9cb3b88f102d78b7d203e398a7b0f3d38049de02bac57f3b3eb5a51374725e"
+    },
+    {
+      "path": "data/demo/07-分集/EP07-场景纲.md",
+      "bytes": 12419,
+      "sha256": "10bb954a1faba54a5b18dedddf7ea42ae0efe63833d32c644ec718a70bce481d"
+    },
+    {
+      "path": "data/demo/07-分集/EP08-场景纲.md",
+      "bytes": 12716,
+      "sha256": "f94df130bfb79c6068e53a3f353e1a072d432e1b246884ed16c2675f17ca20e6"
+    },
+    {
+      "path": "data/demo/07-分集/EP09-场景纲.md",
+      "bytes": 13078,
+      "sha256": "ba053333c857cee48ee3ed8d47384ee9afb5a501f5ce4ddd92290ed79968064d"
+    },
+    {
+      "path": "data/demo/07-分集/EP10-场景纲.md",
+      "bytes": 11434,
+      "sha256": "b50f7ed8439b18e4a0cc847984521df717391b4cab3eb182b2f985c75537cc0a"
+    },
+    {
+      "path": "data/demo/07-分集/EP11-场景纲.md",
+      "bytes": 10706,
+      "sha256": "975065872bb5c5ca5492f33aa28d582bee8c1075b416c40de113faccefd9d92c"
+    },
+    {
+      "path": "data/demo/07-分集/EP12-场景纲.md",
+      "bytes": 11816,
+      "sha256": "535e4d455bb36ea57a0ad45fa0c2f275c07125a6756dc7013e7b81e17f374a8e"
+    },
+    {
+      "path": "data/demo/07-分集/EP13-场景纲.md",
+      "bytes": 12854,
+      "sha256": "2e9aa32697d9e3a53e29723a7e49646030fc4593b9c908ac21ee87e89e740fd9"
+    },
+    {
+      "path": "data/demo/07-分集/EP14-场景纲.md",
+      "bytes": 14408,
+      "sha256": "d23ed308acdce7c6ee93bd3bd7952cd8e8af981e6fbf509aa57fd8ddd9313c09"
+    },
+    {
+      "path": "data/demo/07-分集/EP15-场景纲.md",
+      "bytes": 16093,
+      "sha256": "b2c798e1df0970a2a8cc6cbbbed20169bb562ab50ff988a66d394b2d09394323"
+    },
+    {
+      "path": "data/demo/07-分集/EP16-场景纲.md",
+      "bytes": 13191,
+      "sha256": "73ea4f00564d62348b0d1dfa25bb5243c1b0eae26a5d79fa4e1bb2d151745dea"
+    },
+    {
+      "path": "data/demo/07-分集/EP17-场景纲.md",
+      "bytes": 15792,
+      "sha256": "9829f207bac1c6140ee820cf475290be28f2511d0bf2332048a3a3357128ba65"
+    },
+    {
+      "path": "data/demo/07-分集/EP18-场景纲.md",
+      "bytes": 15734,
+      "sha256": "f70a411e5d127ab63bb73d1984d8e3c876bece38f87261e6173affd9a7e28993"
+    },
+    {
+      "path": "data/demo/07-分集/EP19-场景纲.md",
+      "bytes": 18798,
+      "sha256": "7909da7565a82e665e16ca1f0e1659099660bb78a76de8e3f5640abc9bf1c2dd"
+    },
+    {
+      "path": "data/demo/07-分集/EP20-场景纲.md",
+      "bytes": 17286,
+      "sha256": "7e83e64093b1cd66f72600ae9ac357b166c51ed5160f68c5a613b4ffe1ac0212"
+    },
+    {
+      "path": "data/demo/07-分集/EP21-场景纲.md",
+      "bytes": 21870,
+      "sha256": "c7f242d3830ea8b650024bb66974c16aa61aece4e42aa46e4b007aa115bdb1ac"
+    },
+    {
+      "path": "data/demo/07-分集/EP22-场景纲.md",
+      "bytes": 14979,
+      "sha256": "f5492e65ff7cfa13fa4710e8c2bdee71ba0e8d35a61d16d35d2dcb63efc25c70"
+    },
+    {
+      "path": "data/demo/07-分集/EP23-场景纲.md",
+      "bytes": 17299,
+      "sha256": "d1161f47732f5d4520df8f0935074313f9bb7f8ed273c05ee6941a6840a4b2ce"
+    },
+    {
+      "path": "data/demo/07-分集/EP24-场景纲.md",
+      "bytes": 18916,
+      "sha256": "c8fd0f8cfb0f9ff3794b5fa3ab27ea774ec2cc2b97c2dcadd98a9fd0e69f0fb7"
+    },
+    {
+      "path": "data/demo/07-分集/全局分集大纲.md",
+      "bytes": 66827,
+      "sha256": "67218ba9d2ba2204a2dac37c0fc096404ef2d04506b74ef97fff00c87106159d"
+    },
+    {
+      "path": "data/demo/08-细节/伏笔与闲笔.md",
+      "bytes": 13422,
+      "sha256": "56f8bb2d8040751ec3cee745f7e85427d22874f4e460600c13577629fb9a23a7"
+    },
+    {
+      "path": "data/demo/09-剧本/EP01-夺回人生.fountain",
+      "bytes": 60417,
+      "sha256": "902fc7a29969c47be07ef77abbf8aad5e7595932a0851d55869fa2b07c2c478e"
+    },
+    {
+      "path": "data/demo/09-剧本/EP02-第三个雪人.fountain",
+      "bytes": 49921,
+      "sha256": "3958f12010ad5d9146f9fcb877746fe599ae0303c6505379c6d59b7aaa0bbdd6"
+    },
+    {
+      "path": "data/demo/09-剧本/EP03-少年的决定.fountain",
+      "bytes": 43976,
+      "sha256": "02659c66bd3ec37fe57ffba15429c41017d7823332daff0bd2d3dcfb4ff0a018"
+    },
+    {
+      "path": "data/demo/09-剧本/EP04-避风港争夺战.fountain",
+      "bytes": 41310,
+      "sha256": "e6bd08ec4ceaf872443b3e75dc505c475beae6022a50781d343765d842d7019b"
+    },
+    {
+      "path": "data/demo/09-剧本/EP05-回家.fountain",
+      "bytes": 46684,
+      "sha256": "4ee10a11c089851f970265e61cd64880edcb83ff9bd10aee1cb66ac550e50e2a"
+    },
+    {
+      "path": "data/demo/09-剧本/EP06-暖雪.fountain",
+      "bytes": 43522,
+      "sha256": "53847e78a977712aebc195dbd693c0a1d666a434c6e15b884371895b6c009f0a"
+    },
+    {
+      "path": "data/demo/09-剧本/EP07-舒图来了.fountain",
+      "bytes": 52406,
+      "sha256": "302ca60486f5b1e4bb31a725b0c4299a6c5f50f0a2ae06d287df57b40386721d"
+    },
+    {
+      "path": "data/demo/09-剧本/EP08-时间的玩笑.fountain",
+      "bytes": 55281,
+      "sha256": "6137908e0849b63dac8d810ad2a97a300d046965334aed2d98a4631771268721"
+    },
+    {
+      "path": "data/demo/09-剧本/EP09-人生失控.fountain",
+      "bytes": 53655,
+      "sha256": "d7975209b6066033be746f386d8ea47910bad1316b615fdaf39371401e7bae74"
+    },
+    {
+      "path": "data/demo/09-剧本/EP10-只要我想.fountain",
+      "bytes": 43850,
+      "sha256": "a3626adcfc2cbdb8aa0cbf9d0aea2b2097b061813dfe01911e4d68cd2b23cb43"
+    },
+    {
+      "path": "data/demo/09-剧本/EP11-YOU WIN.fountain",
+      "bytes": 47999,
+      "sha256": "a00263ef0f2a5d45ff257919bf880858d03dd4a2a5190286d09f970519428b99"
+    },
+    {
+      "path": "data/demo/09-剧本/EP12-寻未来.fountain",
+      "bytes": 49738,
+      "sha256": "89e70ff06c6ba9009b8c6891877b73aa36c3a8a9ac73c98ac50ea42d6bf8d4fa"
+    },
+    {
+      "path": "data/demo/09-剧本/EP13-我与我的宣战.fountain",
+      "bytes": 51891,
+      "sha256": "92b8063bbd7d22b17dfce367dba2fcee740e4fbd17cf7b29789436cf06dfff05"
+    },
+    {
+      "path": "data/demo/09-剧本/EP14-继承.fountain",
+      "bytes": 52113,
+      "sha256": "ecca9f194d02d9f1bc73c78aaef359ac591949cf1e3e19b1ff483fb073e7844a"
+    },
+    {
+      "path": "data/demo/09-剧本/EP15-左或右.fountain",
+      "bytes": 48038,
+      "sha256": "7315a728a64f11154f95e5215a61fa3e0db0b6d8175c011d2a4972f62f78e660"
+    },
+    {
+      "path": "data/demo/09-剧本/EP16-再见，老同学.fountain",
+      "bytes": 45961,
+      "sha256": "e12e864af9c3bcbf259538068ee35d67457f63191cb577645d79b12970cdaba0"
+    },
+    {
+      "path": "data/demo/09-剧本/EP17-不速之客.fountain",
+      "bytes": 37384,
+      "sha256": "86615fa3c4da6f72fbc8bdf4fddf8f9583535de8a3719d6c72f2470f0d26b55b"
+    },
+    {
+      "path": "data/demo/09-剧本/EP18-一夜剧变.fountain",
+      "bytes": 37930,
+      "sha256": "f98ab01261f5bce19cacda227bed989d82eca1f8309fecdf22bb6bdf19c3b907"
+    },
+    {
+      "path": "data/demo/09-剧本/EP19-仁.fountain",
+      "bytes": 35063,
+      "sha256": "c64e75cbfd9ec078e8879f8f64b1dcae96b0f841900b3f455feb9b68781a45c7"
+    },
+    {
+      "path": "data/demo/09-剧本/EP20-涉过夏天.fountain",
+      "bytes": 31392,
+      "sha256": "fc380ceb583d6264c336125a076f5e536034238e12909ca5b0ab64d2bafd63ca"
+    },
+    {
+      "path": "data/demo/09-剧本/EP21-当雪落下.fountain",
+      "bytes": 54512,
+      "sha256": "08f402779fc676a1767c995c5556bac229f70838b11027c30abb6970c30b60ca"
+    },
+    {
+      "path": "data/demo/09-剧本/EP22-背对背，肩并肩.fountain",
+      "bytes": 42869,
+      "sha256": "472d24fe892f9e931927e14b96249eed64af8b2662ada84f9d04df5f3a2838d9"
+    },
+    {
+      "path": "data/demo/09-剧本/EP23-不可战胜的敌人.fountain",
+      "bytes": 37639,
+      "sha256": "635243b5c485b13806a1ce290ceca04dece9c2356ca6431e1adfb864478703f3"
+    },
+    {
+      "path": "data/demo/09-剧本/EP24-独自面对.fountain",
+      "bytes": 46955,
+      "sha256": "a87011d089c581f9c823213eb7495c8ddc9c8f79640b1178ea0cc041b16fadce"
+    },
+    {
+      "path": "data/demo/10-分镜/EP01-分镜.md",
+      "bytes": 170473,
+      "sha256": "3fb5a98729e45cfc616fad2767a3b1e719198a031e762de5b6b016260907c628"
+    },
+    {
+      "path": "data/demo/10-分镜/EP02-分镜.md",
+      "bytes": 136645,
+      "sha256": "b7d3b8db6f4f6de7295d223558eefe5fd1f8e56df1cbfe978e137885d356dce1"
+    },
+    {
+      "path": "data/demo/10-分镜/EP03-分镜.md",
+      "bytes": 130326,
+      "sha256": "8703d7088d0f0b9b5ad277ebe31807c33f24f3e14085071fccfe4a7baca274d0"
+    },
+    {
+      "path": "data/demo/10-分镜/EP04-分镜.md",
+      "bytes": 99559,
+      "sha256": "f0823d00e53bdb48a3122058294261796344e74607101bcc216a33a7d3cb8f59"
+    },
+    {
+      "path": "data/demo/10-分镜/EP05-分镜.md",
+      "bytes": 122304,
+      "sha256": "5272eacd1715e9c826f899fe2c968e3a1801f4c3f5f2d0ea238cad219194a32b"
+    },
+    {
+      "path": "data/demo/10-分镜/EP06-分镜.md",
+      "bytes": 127203,
+      "sha256": "d8f57cd57539176410e12c39bd506054a8be1a148a113254a72017a2671e0a44"
+    },
+    {
+      "path": "data/demo/10-分镜/EP07-分镜.md",
+      "bytes": 118764,
+      "sha256": "d0440803ef12fbebbf6bfba212408ba5286f08b65bc8ab6db04c8acf785c28ae"
+    },
+    {
+      "path": "data/demo/10-分镜/EP08-分镜.md",
+      "bytes": 121674,
+      "sha256": "dfd261b73cf3364b6247627f237eb67a3e9723f1753c785bc051fb6111f749fa"
+    },
+    {
+      "path": "data/demo/10-分镜/EP09-分镜.md",
+      "bytes": 114415,
+      "sha256": "2f6cefc512d568946fea7a2b43613b5f8ca8a0c5521483a6c219e335960d326d"
+    },
+    {
+      "path": "data/demo/10-分镜/EP10-分镜.md",
+      "bytes": 94831,
+      "sha256": "953cefd37a3a890f18f8b280d320545c83b8b0f4d9da776f907f7647ceb4ce6e"
+    },
+    {
+      "path": "data/demo/10-分镜/EP11-分镜.md",
+      "bytes": 101773,
+      "sha256": "1c322a78d6e7665b59169c11274fa5ebaa04ef46ca60702171fd96e6fcd2e8ef"
+    },
+    {
+      "path": "data/demo/10-分镜/EP12-分镜.md",
+      "bytes": 103376,
+      "sha256": "9981eb3ed79f4ffb102a2124e3ef78f40dfeaa3a4418d95fc42e1452d8a01633"
+    },
+    {
+      "path": "data/demo/10-分镜/EP13-分镜.md",
+      "bytes": 108027,
+      "sha256": "ed38657d56d4b54963cb7eaa906241328d0c77c8a843eca71957904e350f507a"
+    },
+    {
+      "path": "data/demo/10-分镜/EP14-分镜.md",
+      "bytes": 106555,
+      "sha256": "c9d4371e35f388face9c729036dfb3ab4870dc9aafc2bca412722f44beb39855"
+    },
+    {
+      "path": "data/demo/10-分镜/EP15-分镜.md",
+      "bytes": 95844,
+      "sha256": "4d3fe1623f8c7843cd713bb0280eb0bb6758229a69ad77a5f20ff8e8ada09ece"
+    },
+    {
+      "path": "data/demo/10-分镜/EP16-分镜.md",
+      "bytes": 92260,
+      "sha256": "49085556122ce9957096559534d836cacb957d413c92f7ebd20aa61f2fd08443"
+    },
+    {
+      "path": "data/demo/10-分镜/EP17-分镜.md",
+      "bytes": 71508,
+      "sha256": "e3fd7480db1861d71c376a1b665a6d3aeb22d2758de6d127a9347ff28f0302a9"
+    },
+    {
+      "path": "data/demo/10-分镜/EP18-分镜.md",
+      "bytes": 70595,
+      "sha256": "1a1edaea0bacaa12036b068f5a364df962a8e76d399eb08ec156cdc238102d8c"
+    },
+    {
+      "path": "data/demo/10-分镜/EP19-分镜.md",
+      "bytes": 66494,
+      "sha256": "a3b2bc359796f7841e7ee9bb3f78ef55f18cd9860550572e5e86360c96e4ac56"
+    },
+    {
+      "path": "data/demo/10-分镜/EP20-分镜.md",
+      "bytes": 56872,
+      "sha256": "343300361efe3c226e32d933f9ceb45fb94e5481ac7cfab279c8da043c8bee41"
+    },
+    {
+      "path": "data/demo/10-分镜/EP21-分镜.md",
+      "bytes": 112181,
+      "sha256": "5067d1285df8eff65d45f4bbbef1771aca3b01985f9b312f6070b080b88a3131"
+    },
+    {
+      "path": "data/demo/10-分镜/EP22-分镜.md",
+      "bytes": 83934,
+      "sha256": "f55ec6831515903ab0bc745c0c47fdbdba1f44d86fdea8d2201872aaa4279e4b"
+    },
+    {
+      "path": "data/demo/10-分镜/EP23-分镜.md",
+      "bytes": 70844,
+      "sha256": "be4686f3712c07053e48f1181389b13a09e2e4c8f6d19ed901416ac75a3c804e"
+    },
+    {
+      "path": "data/demo/10-分镜/EP24-分镜.md",
+      "bytes": 94909,
+      "sha256": "ba8575b8ee5e5b683bb2f866a15f22d9e19a6df054c20f03d7e214120e2efd76"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP01-阐述.md",
+      "bytes": 21608,
+      "sha256": "7d1983fcf7735ed917e30e26648262aa7b106f5bb1cce3b1733315dee17267ff"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP02-阐述.md",
+      "bytes": 18594,
+      "sha256": "461ab910c2df5cbbd5b1f5c291825f8257c484598237e1a8263d936dd4b314fb"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP03-阐述.md",
+      "bytes": 18763,
+      "sha256": "7622e8789b5a4dc5fb431e7ca1f765dad5a611b82e8743395fdc2c0b791f9c22"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP04-阐述.md",
+      "bytes": 19059,
+      "sha256": "6d5408fffbce5e379c218a4c776393c463491ffdcc27a33cb944374a710f3f41"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP05-阐述.md",
+      "bytes": 18466,
+      "sha256": "a688017b9ba921ac7d6e9e29eeb6e2f49c9c0638ac9494569879097e7688912d"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP06-阐述.md",
+      "bytes": 18921,
+      "sha256": "54f2a6636f98ebab108d7ee4ccf64b960d2d9aaeee9c7487a037a4caa133e8dc"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP07-阐述.md",
+      "bytes": 18583,
+      "sha256": "10809c25d01c49f529ded13c17426ec1e35ca6b3bc3382aaeda8370545ac80d0"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP08-阐述.md",
+      "bytes": 18797,
+      "sha256": "d77a6467167313798218138a9b3785a09adbf1d088274bedd539351939610613"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP09-阐述.md",
+      "bytes": 16417,
+      "sha256": "c439d281fe87c29a007cd6af767020f9e0690e564255c70b97cc6f958cdb9343"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP10-阐述.md",
+      "bytes": 14372,
+      "sha256": "e923e6345c2206011fa0044cc16e0dc69f72abf101eff49bf169282a3ef95468"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP11-阐述.md",
+      "bytes": 14421,
+      "sha256": "08fcc94cdb12179ca9469c4f54ca061b2578318d143ab1574279e7bc9618049d"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP12-阐述.md",
+      "bytes": 13877,
+      "sha256": "a8a422eb98a74b74c3a86d4d87653bb9a561c83c4313d2d812aeb5837ac37603"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP13-阐述.md",
+      "bytes": 13586,
+      "sha256": "2b7508896400b4b40e1883591f8e1d76a15b8fc042a2cb1c7382a7bb87374520"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP14-阐述.md",
+      "bytes": 14198,
+      "sha256": "6f8fea3689b0945c7a4a87375eba67993b6287ea9dcf39c38b143c26f947ab34"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP15-阐述.md",
+      "bytes": 15100,
+      "sha256": "7d300f78839789401d7216e57f9b9fa35d75f30f29c6631743c9cf42cc910f2b"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP16-阐述.md",
+      "bytes": 15542,
+      "sha256": "6fe24d95b47268d60da165f423fe3a610c0163bcfd3bc241b3a09c8d66ca6da4"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP17-阐述.md",
+      "bytes": 14608,
+      "sha256": "b09a74a322cd90812351bb297fc05a50658b1dd77107e0196990a89a8851b4c8"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP18-阐述.md",
+      "bytes": 14226,
+      "sha256": "2e05e81f321bfd9d64c13ce4b15bc9c37a59c736d1c3f32ac081d082d368e37f"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP19-阐述.md",
+      "bytes": 14261,
+      "sha256": "a31a702e32cb85b6971bb1a97be2ac37c1a9f847875f0a2212a994001274934a"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP20-阐述.md",
+      "bytes": 15576,
+      "sha256": "66f9c584ba6a7371a5b1f55b907a40df55cf5271f2146752d4c6a25ae2194c77"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP21-阐述.md",
+      "bytes": 15349,
+      "sha256": "07c01b8d95b2049796fd4eac102ec2542aaa3a6a715a1e7a0d758eafd111ec88"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP22-阐述.md",
+      "bytes": 15790,
+      "sha256": "2b964ba677ff6de3fc7b57e185e382642b0f008b25b15d9092f1ad3f75683bf2"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP23-阐述.md",
+      "bytes": 15647,
+      "sha256": "22134999ca0c19b5751c6c8a972dc5eba8ec4bbf714747f24ba0b81b437953c1"
+    },
+    {
+      "path": "data/demo/11-单集阐述/EP24-阐述.md",
+      "bytes": 20288,
+      "sha256": "a5911aae9fe72ddd1972c1057ef3c7eb1d76101099c7fc6beb71987198df3586"
+    },
+    {
+      "path": "data/demo/12-项目书/项目书.md",
+      "bytes": 20168,
+      "sha256": "26ea099d6679f0bb0f3ca939bb3c8bc3f1a3e7c0df9b8321a2a92d62201b4364"
+    },
+    {
+      "path": "data/demo/13-预告/预告与宣发.md",
+      "bytes": 6203,
+      "sha256": "932d80ce9c95b9fbeed7021e0759211607412bd278013b358b44a26c265b821e"
+    },
+    {
+      "path": "data/demo/14-终检/终检与复盘.md",
+      "bytes": 29366,
+      "sha256": "a4d57d2e9cba0768c4f59b0fe2b010c5ef8c84b42d02b15502c8269a6df9d880"
+    },
+    {
+      "path": "data/demo/_project.json",
+      "bytes": 495,
+      "sha256": "97e6d28339c98315ba662baee7207cfff561f36e19e2fc75de1fb32928d2aa85"
+    },
+    {
+      "path": "data/demo/_state/continuity.md",
+      "bytes": 17545,
+      "sha256": "f2f105e687b7d3182df3e6e99fa41840eaf0ddd9f6b7a2ac1ef1b197205dfe23"
+    },
+    {
+      "path": "data/demo/_state/current.md",
+      "bytes": 899,
+      "sha256": "57aa902794d736eeb48090eb7290d12bf26879bbcc289c56e849f03ea769ee86"
+    },
+    {
+      "path": "data/demo/_state/decisions.md",
+      "bytes": 3468,
+      "sha256": "f9684ff44a529cb7ba9b150a18fd26c4b84b62fc5964edb2d981922e5fa9429d"
+    },
+    {
+      "path": "data/demo/_state/index.md",
+      "bytes": 7994,
+      "sha256": "10b83f8c16aa1f71d0f7d9694b62f32fccc2f62508ab554e2d686b2382754ba8"
+    },
+    {
+      "path": "data/demo/_state/locked.md",
+      "bytes": 3256,
+      "sha256": "155e7b0113796fc4b8ae96915bb229e02dbc7513ff1afd55ab415a10e49f10ed"
+    },
+    {
+      "path": "data/templates/README.md",
+      "bytes": 1078,
+      "sha256": "efafcfa3b78fb68e86535b263a547e57078c128e6e44d2cd73a70a34a421010d"
+    },
+    {
+      "path": "data/templates/剧集/01-立项/立项定位表.md",
+      "bytes": 6564,
+      "sha256": "c23689eb5400d287163d514899612dc4b4b509a8c8ec725bd5d511933bae0398"
+    },
+    {
+      "path": "data/templates/剧集/02-总论/九编式总论.md",
+      "bytes": 8133,
+      "sha256": "4a702346ffeeccbcece9e3e1e064d73d36a5a3f83c4005768f72da33f0aab039"
+    },
+    {
+      "path": "data/templates/剧集/03-生活场/生活场与铁律.md",
+      "bytes": 1077,
+      "sha256": "b2bd8aeebd033e2d9daf6e703ecb8669bcb0cedca91289a1b5ceacfc3c764938"
+    },
+    {
+      "path": "data/templates/剧集/04-人物/一人一档-c01-角色名.md",
+      "bytes": 4572,
+      "sha256": "ae395fc9eb1f653236f8ea3c13bc3df8a991de5c6f1adf87b4a7f1d69e14cf78"
+    },
+    {
+      "path": "data/templates/剧集/05-场景/一景一档-loc01-场景名.md",
+      "bytes": 1150,
+      "sha256": "05d2e2d987ee71e239d7d940059dfcab835a82ae04558939febad49d30e7e2d4"
+    },
+    {
+      "path": "data/templates/剧集/06-道具/道具总表.md",
+      "bytes": 960,
+      "sha256": "bef9dd62e0780460ad4f12a792a5a819865fc55e3b965711acd3afd1559c7ba4"
+    },
+    {
+      "path": "data/templates/剧集/07-分集/全局分集大纲.md",
+      "bytes": 618,
+      "sha256": "89a6e9fe84cb394ff9677800e3ca03109b48f1078246f1213cf239cac77df55b"
+    },
+    {
+      "path": "data/templates/剧集/08-细节/伏笔与闲笔.md",
+      "bytes": 1013,
+      "sha256": "695e5b920641094f757ec73e55d4c501553c6170ec64c81b707d998e1aaf88de"
+    },
+    {
+      "path": "data/templates/剧集/09-剧本/EP01-第1集.fountain",
+      "bytes": 59,
+      "sha256": "f5c82b130adcfca273935bd9dc9b315fca89c6777ea43b4d334fdbea5eb6b6f7"
+    },
+    {
+      "path": "data/templates/剧集/10-分镜/EP01-分镜.md",
+      "bytes": 763,
+      "sha256": "a2750b36c86fbde1b70fcf1c48620134d6d773f30517a017339b7279d749639a"
+    },
+    {
+      "path": "data/templates/剧集/11-单集阐述/EP01-阐述.md",
+      "bytes": 2989,
+      "sha256": "551b849c28d6dd11f42de5fbee1683f88b90518d297b8b0670fb16d5b07b8259"
+    },
+    {
+      "path": "data/templates/剧集/12-项目书/项目书.md",
+      "bytes": 4013,
+      "sha256": "f75e6ede6162786404abdfd9cf3ed3653365071cf349b2ca536c9cc322d0835e"
+    },
+    {
+      "path": "data/templates/剧集/13-预告/预告与宣发.md",
+      "bytes": 2387,
+      "sha256": "bf5758c6848590b9777116bffdfa04e7965bd508695d7c3f1e7e749641e6aaa9"
+    },
+    {
+      "path": "data/templates/剧集/14-终检/终检与复盘.md",
+      "bytes": 3816,
+      "sha256": "516bc6a30df69f93433ac50bb5e2a4bb220343d8891fb3751b82e43128fab5fa"
+    },
+    {
+      "path": "data/templates/剧集/README.md",
+      "bytes": 987,
+      "sha256": "a0f00081c8a825ce4b0e3af56b44fea906b672b5c21d86cc266237ec6522b8e7"
+    },
+    {
+      "path": "data/templates/小说/01-立项/立项定位表.md",
+      "bytes": 1240,
+      "sha256": "b365e5deac4aa53938fcb802b4087dbeb8f437131fa94c9f60e1a7d594d734b5"
+    },
+    {
+      "path": "data/templates/小说/02-总论/故事圣经.md",
+      "bytes": 1270,
+      "sha256": "db8707947aa73764ce83c50bad468322d409fbd1716e1cf05adbce60352ccb17"
+    },
+    {
+      "path": "data/templates/小说/03-生活场/生活场与铁律.md",
+      "bytes": 1077,
+      "sha256": "b2bd8aeebd033e2d9daf6e703ecb8669bcb0cedca91289a1b5ceacfc3c764938"
+    },
+    {
+      "path": "data/templates/小说/04-人物/人物圣经-c01-角色名.md",
+      "bytes": 4572,
+      "sha256": "a1b179bfe09b3a9a91eaa2672b37d6d94890188c9e854f4f4f3e7f4b1cc7257f"
+    },
+    {
+      "path": "data/templates/小说/05-场景/一景一档-loc01-场景名.md",
+      "bytes": 731,
+      "sha256": "1a3db6da9b9a159011a2db625f8062307127f8f1276f08ee80fef9cafe3db856"
+    },
+    {
+      "path": "data/templates/小说/06-道具/道具总表.md",
+      "bytes": 960,
+      "sha256": "bef9dd62e0780460ad4f12a792a5a819865fc55e3b965711acd3afd1559c7ba4"
+    },
+    {
+      "path": "data/templates/小说/07-分集/分卷与章纲.md",
+      "bytes": 810,
+      "sha256": "a7170b85ec063a0a467b58860b7b3075d3c8c328eed3f093f8119310d66515f8"
+    },
+    {
+      "path": "data/templates/小说/08-细节/伏笔与闲笔.md",
+      "bytes": 1013,
+      "sha256": "695e5b920641094f757ec73e55d4c501553c6170ec64c81b707d998e1aaf88de"
+    },
+    {
+      "path": "data/templates/小说/09-剧本/第01章.md",
+      "bytes": 438,
+      "sha256": "774914322e9c938426c86210e67c1d0f3fd7b5969167cbcfb49f2c897871e3ba"
+    },
+    {
+      "path": "data/templates/小说/11-单集阐述/第01章-细读.md",
+      "bytes": 419,
+      "sha256": "7a6617f17c903fa32a2aaa39fdfb4279cdf5df139b2ab13801c422b5a4cc9d6b"
+    },
+    {
+      "path": "data/templates/小说/12-项目书/项目书.md",
+      "bytes": 2315,
+      "sha256": "5f370d68ea356aeb6547bd72314d6e806d1dce2df77fb231b7aabf1762f06014"
+    },
+    {
+      "path": "data/templates/小说/14-终检/终检与复盘.md",
+      "bytes": 2480,
+      "sha256": "dda5b545b41a2d2ca3396bb6b647f40015c1c09d079ce5c60187779601b529ad"
+    },
+    {
+      "path": "data/templates/小说/README.md",
+      "bytes": 2078,
+      "sha256": "843d012467679cef4878053f1414b9acacab2e684b93c3da6d09662733864b9a"
+    },
+    {
+      "path": "data/templates/电影/01-立项/立项定位表.md",
+      "bytes": 7985,
+      "sha256": "20a9916eb62fa386b7f1a372521207afc953187ca37d178286ee184fa6aad151"
+    },
+    {
+      "path": "data/templates/电影/02-总论/九编式总论.md",
+      "bytes": 7496,
+      "sha256": "4c64644e62cea408010b0f1e0dfc34db4ed0522b2f27990adcb516153bf5d410"
+    },
+    {
+      "path": "data/templates/电影/03-生活场/生活场与铁律.md",
+      "bytes": 1551,
+      "sha256": "0257c4551b7df70ecaa1791e43c3d00235dda0cd42648450dd49b9680b193c68"
+    },
+    {
+      "path": "data/templates/电影/04-人物/一人一档-c01-角色名.md",
+      "bytes": 4359,
+      "sha256": "57cc254907bf75669547b2df71a7b66b323bf9011cd267329b79fce424dbaf3c"
+    },
+    {
+      "path": "data/templates/电影/05-场景/一景一档-loc01-场景名.md",
+      "bytes": 1298,
+      "sha256": "98e90855bea377242b5e4bcf31ff03dac81d4d4bfae13dd3e51f4926efed378e"
+    },
+    {
+      "path": "data/templates/电影/06-道具/道具总表.md",
+      "bytes": 920,
+      "sha256": "3d97963e0c3f966d2e28a76fc7557e99bd20b125e4b85a0270f62d2feb22ba2b"
+    },
+    {
+      "path": "data/templates/电影/07-分集/分幕与节拍.md",
+      "bytes": 3695,
+      "sha256": "293c6c55358812bc819cb1003f8cefb568928c4afcf90d78ecf319d37fd41194"
+    },
+    {
+      "path": "data/templates/电影/08-细节/伏笔与闲笔.md",
+      "bytes": 1535,
+      "sha256": "eec20ef8e7e25ab69090153e7282c848628cfafdbe73f58e363f3f3f26c382c5"
+    },
+    {
+      "path": "data/templates/电影/09-剧本/全片剧本.fountain",
+      "bytes": 40,
+      "sha256": "022368e133b4a1a7f159f4bd3405af30fa09f4bf110a3fcefa75f10ce3072f75"
+    },
+    {
+      "path": "data/templates/电影/10-分镜/全片分镜.md",
+      "bytes": 788,
+      "sha256": "bac9a8d08e6862d70702123f9a94616791cf6775ecba53c5520c8c20f3135c58"
+    },
+    {
+      "path": "data/templates/电影/11-单集阐述/重场戏阐述.md",
+      "bytes": 560,
+      "sha256": "ea1e32c81761b06426020ec48f1867bc8e7eb3dfe6bd84cb259bfdc43f9721cc"
+    },
+    {
+      "path": "data/templates/电影/12-项目书/项目书.md",
+      "bytes": 2410,
+      "sha256": "4e743dd12d976195e259f6c61342a1ea0db21ac133f4c07028e9869e88103698"
+    },
+    {
+      "path": "data/templates/电影/13-预告/宣发与预告.md",
+      "bytes": 6224,
+      "sha256": "7113ea5a27fdf5677265149c09f233634c67618b8bd775fa1cc7b82edf32ecea"
+    },
+    {
+      "path": "data/templates/电影/14-终检/终检与复盘.md",
+      "bytes": 3523,
+      "sha256": "7a315707df6e7ff1762fe855bea3c92b69cd7a1fad2d543633879cf2c0eacda6"
+    },
+    {
+      "path": "data/templates/电影/README.md",
+      "bytes": 2655,
+      "sha256": "602379d9d6e6d842ef5f19e4a9a26a411734b1d9d337aa1ce74266ce57c7ed2d"
+    },
+    {
+      "path": "data/templates/短剧/01-立项/立项定位表.md",
+      "bytes": 2579,
+      "sha256": "23972ac3c27ac697c024ccf58db89e5998b904f90a013eea40d322824f98c1a1"
+    },
+    {
+      "path": "data/templates/短剧/02-总论/短剧设定.md",
+      "bytes": 2699,
+      "sha256": "0b32b896c1ae0403ed45bdcc1ab44a09615904d22e88f32e29c6682b70002a82"
+    },
+    {
+      "path": "data/templates/短剧/03-生活场/世界观与规矩.md",
+      "bytes": 817,
+      "sha256": "58676556231565bea10a4360d991a63bdc5633362c359fbbcdfdcedd4091915a"
+    },
+    {
+      "path": "data/templates/短剧/04-人物/人物五行总表.md",
+      "bytes": 785,
+      "sha256": "b48ceee788fe2c879d83957d109fe32a17b70141775900fcd9b798d83d0eb94d"
+    },
+    {
+      "path": "data/templates/短剧/05-场景/场景档.md",
+      "bytes": 385,
+      "sha256": "95467762484b6e5d5810c1754d583bff2d99156306beafc8b3218018c767a172"
+    },
+    {
+      "path": "data/templates/短剧/06-道具/道具总表.md",
+      "bytes": 960,
+      "sha256": "bef9dd62e0780460ad4f12a792a5a819865fc55e3b965711acd3afd1559c7ba4"
+    },
+    {
+      "path": "data/templates/短剧/07-分集/全局分集大纲.md",
+      "bytes": 1528,
+      "sha256": "6dbf2a00ca773ff7c33e55b379665a1d23633fe222a78de1e7457f91d397e295"
+    },
+    {
+      "path": "data/templates/短剧/08-细节/伏笔与闲笔.md",
+      "bytes": 514,
+      "sha256": "c4e4ca6dc3e575e4a19c78dc16ae18acf05a28598cc75e83976339a20c45b673"
+    },
+    {
+      "path": "data/templates/短剧/09-剧本/EP01-第1集.fountain",
+      "bytes": 59,
+      "sha256": "f5c82b130adcfca273935bd9dc9b315fca89c6777ea43b4d334fdbea5eb6b6f7"
+    },
+    {
+      "path": "data/templates/短剧/10-分镜/EP01-分镜.md",
+      "bytes": 466,
+      "sha256": "4515b630025b78d7ce384404cbb6d2c61f983944366530184aa3bcfaf5322a00"
+    },
+    {
+      "path": "data/templates/短剧/12-项目书/项目书.md",
+      "bytes": 2379,
+      "sha256": "3875bebbc3c387b748124986939e7f4cd906936798dcd58016456d8f7337fd0f"
+    },
+    {
+      "path": "data/templates/短剧/13-预告/预告与宣发.md",
+      "bytes": 2387,
+      "sha256": "bf5758c6848590b9777116bffdfa04e7965bd508695d7c3f1e7e749641e6aaa9"
+    },
+    {
+      "path": "data/templates/短剧/14-终检/终检与复盘.md",
+      "bytes": 3816,
+      "sha256": "516bc6a30df69f93433ac50bb5e2a4bb220343d8891fb3751b82e43128fab5fa"
+    },
+    {
+      "path": "data/templates/短剧/README.md",
+      "bytes": 1557,
+      "sha256": "c6dc4282f1966ebf4940f1e549c2001b7a03c9eecfb9b1565c45eac0194d1eff"
+    },
+    {
+      "path": "mcp.json",
+      "bytes": 131,
+      "sha256": "0d3607207568f381afaddf6308310cf7d2f3dffdc78d274732c664fd9a6b51d2"
+    },
+    {
+      "path": "package.json",
+      "bytes": 238,
+      "sha256": "30f10831586d19195f17a2b9f56a49bb40cce3ae02696341834e9a8c19201d53"
+    },
+    {
+      "path": "plugin.json",
+      "bytes": 1337,
+      "sha256": "3fe73e77816e3274bfd1c052d1550aa717a4338fd47f8309aa87bdfee4f5172d"
+    },
+    {
+      "path": "server/index.mjs",
+      "bytes": 2155455,
+      "sha256": "5d1edfa72d4f18b24b011072be1b24f04c8fd4ae660000e5258e2d306f897370"
+    },
+    {
+      "path": "skills/story-idea/SKILL.md",
+      "bytes": 4138,
+      "sha256": "5de883d200203be67bff28ffda8e7416e847d5e096188bb4264de769d665fa59"
+    },
+    {
+      "path": "skills/story-outline/SKILL.md",
+      "bytes": 4649,
+      "sha256": "155e6992222faed0866c865c5d7ab632570503b6582df19b18adb8b65a4cb85d"
+    },
+    {
+      "path": "skills/story-route/SKILL.md",
+      "bytes": 7517,
+      "sha256": "374bf33a6390ed21c373cc261384f529a3b474be0b784df0c9a22d128ea6c541"
+    },
+    {
+      "path": "skills/story-script/SKILL.md",
+      "bytes": 10895,
+      "sha256": "0fb663b5e54ec9b19ab77a7dbe73d757156c8c5937d5e4631f58169521061b9e"
+    },
+    {
+      "path": "ui/dist/index.html",
+      "bytes": 1306858,
+      "sha256": "45bd18623eed5512a611959ee02c75632b7181d979dc82acbdb106f7736fa583"
+    }
+  ]
+}

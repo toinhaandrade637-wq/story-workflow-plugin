@@ -1,0 +1,22 @@
+{
+  "name": "story-workflow",
+  "version": "0.5.0",
+  "description": "影视与小说创作工作流：十四段工序，从一句话灵感跑到可交付的剧本、分镜与项目书。四形态（剧集 / 短剧 / 电影 / 小说）各自独立，互不串味。",
+  "keywords": ["screenwriting", "story-workflow", "film", "drama", "novel", "mcp"],
+  "homepage": "https://github.com/toinhaandrade637-wq/story-workflow-plugin",
+  "skills": "skills",
+  "mcpServers": "mcp.json",
+  "runtime": {
+    "command": "node",
+    "args": ["./server/index.mjs"],
+    "engines": { "node": ">=20.6" }
+  },
+  "interface": {
+    "displayName": "影视全流程",
+    "shortDescription": "十四段工序工作台。每段交一份 markdown，写完能自检缺什么。",
+    "longDescription": "把一部作品从立项做到终检拆成十四段：立项定位表、九编式总论、生活场、一人一档、一景一档、道具总表、全局分集与单集场景纲、伏笔与闲笔、剧本正文、分镜表、单场阐述、项目书、宣发与预告、终检与复盘。剧集、短剧、电影、小说四套形态各有自己的段结构、判据与文件命名，项目之间按目录隔离。",
+    "developerName": "story-workflow",
+    "category": "writing",
+    "defaultPrompt": ["我想做一部电影，先做立项。"]
+  }
+}
