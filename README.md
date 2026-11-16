@@ -4,6 +4,17 @@
 
 它不是"一键生成小说"的黑盒。它是一条**有工序的产线**：十四段，每段只交一份东西，每份都带判据——写完能告诉你哪里还空着、哪里自相矛盾。你（或你的 AI）负责写，它负责不让你漏、不让你前后打架。
 
+> **先看你用的是什么客户端。**
+>
+> | 你的客户端 | 怎么装 |
+> |---|---|
+> | 支持 **Agent Plugins 1.0.0** 的（ChatGPT 桌面端 / Codex / Cursor / Copilot / VS Code / Kiro） | 把仓库目录整个交给它，**不用手写配置**。根目录的 `plugin.json` + `mcp.json` 是标准格式，已通过官方 schema |
+> | 只支持 **MCP** 的（Claude Desktop / Cline / Roo / Zed / Continue / WorkRally） | 用[下方手工配置](#30-秒接入)，**把路径换成你的绝对路径** |
+> | **纯网页聊天**（ChatGPT 网页版、Claude.ai 网页版） | [接不了](#关于-chatgpt)，原因写在那节 |
+
+> **如果你是 AI 助手，正在帮用户装这个** → 直接读 [AGENTS.md](AGENTS.md)。
+> 那一页讲的是：能不能用、Node 怎么查、路径怎么写不踩坑、两种清单别混用、报错怎么处置、工具按什么顺序调。
+
 ---
 
 ## 它能干什么
@@ -56,7 +67,18 @@ git clone https://github.com/toinhaandrade637-wq/story-workflow-plugin.git
 
 ### 2. 接进你的 AI 客户端
 
-任何支持 **MCP（stdio）** 的客户端都能用。把下面这段加进它的配置，**把路径换成你 clone 下来的真实路径**：
+**分两种情况，先确认你属于哪一种。**
+
+#### A. 你的客户端支持 Agent Plugins（ChatGPT 桌面端 / Codex / Cursor / Copilot / VS Code / Kiro）
+
+不用手写配置。**把 clone 下来的整个目录交给它**——它会读根目录的 `plugin.json`，
+按 `mcp.json` 起 `server/index.mjs`。路径由宿主用 `${PLUGIN_ROOT}` 自己拼。
+
+唯一要确认的是 Node 在宿主的 PATH 里。装完让它列一下工具，看到 `story-workflow` 就通了。
+
+#### B. 你的客户端只支持 MCP（Claude Desktop / Cline / Roo / Zed / Continue）
+
+把下面这段加进它的配置，**把路径换成你 clone 下来的真实绝对路径**：
 
 ```json
 {
@@ -70,6 +92,8 @@ git clone https://github.com/toinhaandrade637-wq/story-workflow-plugin.git
 ```
 
 Windows 的路径要写成 `"C:/tools/story-workflow-plugin/server/index.mjs"` 或 `"C:\\\\tools\\\\...\\\\server\\\\index.mjs"`。
+
+> 这类客户端**不认** `${PLUGIN_ROOT}`，直接抄根目录 `mcp.json` 会找不到文件。必须换成绝对路径。
 
 **各客户端配置在哪**
 
@@ -95,16 +119,42 @@ Windows 的路径要写成 `"C:/tools/story-workflow-plugin/server/index.mjs"` �
 
 ## 关于 ChatGPT
 
-说清楚一件事，免得你白折腾：
+说清楚一件事，免得你白折腾。**「ChatGPT」是两回事，别混：**
 
-**ChatGPT 网页版跑不了这个。** 不是因为插件不行，是因为 OpenAI 的网页端只连远程 MCP（HTTPS），不接受"在你电脑上起一个本地进程"这种 stdio 方式。
+**ChatGPT 网页版（聊天框）—— 跑不了。**
+它只连远程 MCP（HTTPS），不接受「在你电脑上起一个本地进程」这种 stdio 方式。
+想让网页版用，需要有人把这个服务部署成带 HTTPS 的远程端点，并解决身份与存储隔离——
+**本项目没有提供这部分**，别按本地配置去连。
 
-能用的情况：
+**ChatGPT 桌面端 / Codex —— 有机会用。**
+它们支持 **Agent Plugins 1.0.0**，而本仓库根目录就是标准包：
 
-- **支持本地 MCP 的客户端**：Claude Desktop、Cursor、Cline、Zed、Continue——直接把上面那段配置粘进去，能用全部 54 个工具。
-- **想在 ChatGPT 里用**：需要有人把这个服务部署成一个带 HTTPS 的远程 MCP 端点，并且解决身份与存储隔离。这部分**本项目没有提供**，别按本地配置去连。
+```
+plugin.json   ← 通过 agent-plugins.org/schemas/1.0.0/plugin.schema.json
+mcp.json      ← 通过 agent-plugins.org/schemas/1.0.0/mcp.schema.json，声明 type: "stdio"
+skills/       ← 四个 Agent Skill，标准 skills/<name>/SKILL.md 结构
+```
 
-同样的话适用于任何云端聊天产品：**能不能用，取决于那个宿主支不支持 MCP stdio，而不是取决于这个包。**
+把整个仓库目录交给支持该标准的宿主，它会自己读 `plugin.json`、起 `server/index.mjs`。
+不用手写配置，也不用改路径（`${PLUGIN_ROOT}` 由宿主注入）。
+
+同样的话适用于任何云端产品：**能不能用，取决于宿主肯不肯在本机起 `node` 进程，
+不取决于这个包本身。**
+
+---
+
+## 两种清单，别混用
+
+仓库根同时有两个清单，面向两类宿主。搞混是接入失败最常见的原因：
+
+| 文件 | 格式 | 给谁 | 路径怎么写 |
+|---|---|---|---|
+| `plugin.json` + `mcp.json` | Agent Plugins 1.0.0 | 支持该标准的插件宿主 | `${PLUGIN_ROOT}`，宿主会替换 |
+| 本文档里的手工 JSON 片段 | 通用 MCP 配置 | Claude Desktop / Cline / Roo / Zed / Continue | **必须绝对路径**，这类客户端不认 `${PLUGIN_ROOT}` |
+
+`plugin.json` 的 schema 是**封闭的**（`additionalProperties: false`），只允许
+`$schema` / `name` / `version` / `description` / `author` / `homepage` / `repository` /
+`license` / `keywords` / `extensions`。多写一个字段整份清单就校验失败，宿主直接不加载。
 
 ---
 
@@ -142,13 +192,20 @@ story-workflow-plugin/
 ├── data/demo/              唯一示例《三人行》（158 份，完整成品）
 ├── data/templates/         四形态空骨架（58 份）
 ├── ui/dist/index.html      MCP Apps 工作台（宿主支持时显示）
+├── AGENTS.md               给 AI 助手的接入手册（配置、排错、调用顺序）
+├── llms.txt                机器可读的仓库摘要
 ├── mcp.json                客户端配置模板
 ├── plugin.json             插件清单
 ├── RELEASE_MANIFEST.json   每个文件的 sha256
 ├── LICENSE                 MIT
 ├── INSTALL.md              安装、排障、卸载
+├── PRIVACY.md              数据去哪了
 └── CHANGELOG.md
 ```
+
+**这份包里没有源码，也没有开发脚本。** 只有运行时需要的东西。
+Skill 里偶尔提到 `tools/*.ts` 这类开发期批处理脚本——那是开发仓库里的工具，
+使用者手上没有，不要假设它存在。
 
 **示例只有《三人行》一部**。它是用来让你看懂"填满的一套长什么样"的，不是模板——不要在上面直接改，导入时会复制成独立项目。
 

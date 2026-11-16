@@ -1,11 +1,11 @@
 {
   "name": "story-workflow",
-  "version": "0.5.0",
-  "sourceCommit": "0d23707c4f3ba24a0dda4582c9fb819dd0cc989f",
-  "builtAt": "2026-11-16T01:04:34.941Z",
+  "version": "0.5.1",
+  "sourceCommit": "9f6fffa78e9739ee990a786925248a6c66a3d8ca",
+  "builtAt": "2026-11-16T01:19:14.436Z",
   "node": ">=20.6",
-  "fileCount": 232,
-  "totalBytes": 8952098,
+  "fileCount": 234,
+  "totalBytes": 8970235,
   "files": [
     {
       "path": ".gitattributes",
@@ -18,9 +18,14 @@
       "sha256": "1dff0bc93f119d5365f1206c8f30b2b81248606434af9d24999dc882291ba2ad"
     },
     {
+      "path": "AGENTS.md",
+      "bytes": 10475,
+      "sha256": "a9a0145f5945ac68ecd69258d927554ab233268c32844a93a023845010d54016"
+    },
+    {
       "path": "CHANGELOG.md",
-      "bytes": 1264,
-      "sha256": "0bfb4396500ead83d83dbfee5880d4ed5873b1625fbe90219fa8cedeb0554fa6"
+      "bytes": 2526,
+      "sha256": "eb085887ca7769039cda26fd3a4a06fa44ce9b3fd940672f1137d367ed18b2de"
     },
     {
       "path": "INSTALL.md",
@@ -39,8 +44,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6613,
-      "sha256": "cab4a3c53265952ad07ca9b8ae4a9fd8c836d58c6ed608172f5c313343e64f97"
+      "bytes": 9786,
+      "sha256": "4e422f909b0fde8ee3a271e612dfcd7500f38b7a1cb7ff67518a2a557097abcc"
     },
     {
       "path": "data/demo/01-立项/立项定位表.md",
@@ -1123,19 +1128,24 @@
       "sha256": "c6dc4282f1966ebf4940f1e549c2001b7a03c9eecfb9b1565c45eac0194d1eff"
     },
     {
+      "path": "llms.txt",
+      "bytes": 2631,
+      "sha256": "8f95eb9341b5e7ecaa4f0489135e623d324280c5f8ed33fad8640c9231f88efb"
+    },
+    {
       "path": "mcp.json",
-      "bytes": 131,
-      "sha256": "0d3607207568f381afaddf6308310cf7d2f3dffdc78d274732c664fd9a6b51d2"
+      "bytes": 257,
+      "sha256": "235591115a0093e5b3d0580bdfbd043c0577fa8cc944a70752a687b6892107a2"
     },
     {
       "path": "package.json",
       "bytes": 238,
-      "sha256": "30f10831586d19195f17a2b9f56a49bb40cce3ae02696341834e9a8c19201d53"
+      "sha256": "eb44fd83af65f400e0c89057f0c278c381eb0a3209382d09e67f20d31501df1b"
     },
     {
       "path": "plugin.json",
-      "bytes": 1337,
-      "sha256": "3fe73e77816e3274bfd1c052d1550aa717a4338fd47f8309aa87bdfee4f5172d"
+      "bytes": 1467,
+      "sha256": "f7d09e893502ce5ace3449e6fdee9bc0879f32a9a7e2973276c6b1c7cbed4369"
     },
     {
       "path": "server/index.mjs",
@@ -1154,13 +1164,13 @@
     },
     {
       "path": "skills/story-route/SKILL.md",
-      "bytes": 7517,
-      "sha256": "374bf33a6390ed21c373cc261384f529a3b474be0b784df0c9a22d128ea6c541"
+      "bytes": 7656,
+      "sha256": "2677322405434c4f6e6e77b1354d99825b079acd0dc251cf081994a3e29ccbbd"
     },
     {
       "path": "skills/story-script/SKILL.md",
-      "bytes": 10895,
-      "sha256": "0fb663b5e54ec9b19ab77a7dbe73d757156c8c5937d5e4631f58169521061b9e"
+      "bytes": 11096,
+      "sha256": "93cffa90433e5d3ef9846f1ee7427a03236cee3cd92cd96aebb5915b9ab2dae7"
     },
     {
       "path": "ui/dist/index.html",
