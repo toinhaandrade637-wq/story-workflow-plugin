@@ -1,12 +1,22 @@
 {
   "name": "story-workflow",
   "version": "0.5.0",
-  "sourceCommit": "cb86f865b25e650bc5bb83cc744ea74c5141d54f",
-  "builtAt": "2026-11-16T01:00:16.445Z",
+  "sourceCommit": "0d23707c4f3ba24a0dda4582c9fb819dd0cc989f",
+  "builtAt": "2026-11-16T01:04:34.941Z",
   "node": ">=20.6",
-  "fileCount": 230,
-  "totalBytes": 8952007,
+  "fileCount": 232,
+  "totalBytes": 8952098,
   "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 45,
+      "sha256": "93699a1108fd9da226b06f84ee12e317f4ea4d2f18a8fd05260443fd1bf2faef"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 46,
+      "sha256": "1dff0bc93f119d5365f1206c8f30b2b81248606434af9d24999dc882291ba2ad"
+    },
     {
       "path": "CHANGELOG.md",
       "bytes": 1264,
